@@ -1,0 +1,8 @@
+
+config BR2_PACKAGE_AESD_CHAR_DRIVER
+	bool "aesd-char-driver"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Includes the aesd char driver.
+	  Used to understand buildroot external trees and package builds.
+	  

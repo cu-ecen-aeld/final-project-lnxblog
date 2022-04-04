@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+  	echo "loading modules"
+	modprobe hello
+	/etc/init.d/misc_load faulty
+	/etc/init.d/scull_load scull
+	/etc/init.d/aesdchar_load
+	;;
+  stop)
+	echo "unloading"
+	rmmod hello
+	/etc/init.d/misc_unload faulty
+	/etc/init.d/scull_unload scull
+	/etc/init.d/aesdchar_unload
+	;;
+esac
+
