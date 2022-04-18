@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Init script to start and stop dl_flash tool
+
+case "$1" in
+  start)
+  	echo "Starting dl_flash tool"
+	start-stop-daemon -S -n dl_flash -a /usr/bin/dl_flash.sh
+	;;
+  stop)
+	start-stop-daemon -K -n dl_flash
+	;;
+esac

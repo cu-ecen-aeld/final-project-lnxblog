@@ -2,18 +2,18 @@
 
 case "$1" in
   start)
-  	echo "loading modules"
-	modprobe hello
-	/etc/init.d/misc_load faulty
-	/etc/init.d/scull_load scull
-	/etc/init.d/aesdchar_load
+  #	echo "loading modules"
+	#modprobe hello
+	#/etc/init.d/misc_load faulty
+	#/etc/init.d/scull_load scull
+	/etc/init.d/start_dl
 	;;
-  stop)
-	echo "unloading"
-	rmmod hello
-	/etc/init.d/misc_unload faulty
-	/etc/init.d/scull_unload scull
-	/etc/init.d/aesdchar_unload
-	;;
+#  stop)
+#	echo "unloading"
+#	rmmod hello
+#	/etc/init.d/misc_unload faulty
+#	/etc/init.d/scull_unload scull
+#	/etc/init.d/aesdchar_unload
+#	;;
 esac
 
